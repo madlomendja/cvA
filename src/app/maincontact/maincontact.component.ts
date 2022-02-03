@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaincontactComponent implements OnInit {
 
+  formulaire = {
+    nom : '',
+    prenom :'',
+    email : '',
+    message : ''
+  }
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onsubmit(){
+    console.log('soumission',this.formulaire)
   }
 
 }
