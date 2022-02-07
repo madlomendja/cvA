@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormulaireService } from '../services/formulaire.service';
+
 
 @Component({
   selector: 'app-maincontact',
@@ -14,13 +16,18 @@ export class MaincontactComponent implements OnInit {
     message : ''
   }
 
-  constructor() { }
+  constructor(private service : FormulaireService) {
+
+   }
 
   ngOnInit(): void {
   }
 
   onsubmit(){
     console.log('soumission',this.formulaire)
+    this.service.recuperation(this.formulaire).subscribe(fleche => {
+      console.log(fleche)
+    })
   }
 
 }

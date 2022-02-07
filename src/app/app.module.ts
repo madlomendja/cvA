@@ -8,10 +8,10 @@ import { MainformationComponent } from './mainformation/mainformation.component'
 import { MaincompetenceComponent } from './maincompetence/maincompetence.component';
 import { MainrealisationsComponent } from './mainrealisations/mainrealisations.component';
 import { MaincontactComponent } from './maincontact/maincontact.component';
-import { NavComponent } from './nav/nav.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,16 +21,17 @@ import { FormsModule } from '@angular/forms';
     MaincompetenceComponent,
     MainrealisationsComponent,
     MaincontactComponent,
-    NavComponent,
     HeaderComponent,
     FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-    
+    HttpClientModule,
+    FormsModule,
+
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
